@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSSE2 EK2</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script type="module" src="assets/js/main.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>CSSE2 EK2 - Jérôme Laroy</h1>
+
+        <!--Vector-->
+            <div class="container">
+                <div class="select-container">
+                    <select id="selectOperationVect">
+                        <option value="0">Optellen</option>
+                        <option value="1">Scalair product</option>
+                    </select>
+
+                    <h3 id=OperationTitle>Optellen</h3>
+                    <form class="form">
+                        <p id="vectorRed">Vector 1:</p>
+                        <div class="sliders">
+                            <p>x:</p>
+                            <input type="range" min="-1" max="1" step="0.1" id="vector1X" value="0" class="slider">
+                            <p id="vector1XStart">0</p>
+                        </div>
+                        <div class="sliders">
+                            <p>y:</p>
+                            <input type="range" min="-1" max="1" step="0.1" id="vector1Y" value="0" class="slider">
+                            <p id="vector1YStart">0</p>
+                        </div>
+                        <div style="display: block" id="vector2">
+                            <p id="vectorGreen">Vector 2:</p>
+                            <div class="sliders">
+                                <p>x:</p>
+                                <input type="range" min="-1" max="1" step="0.1" id="vector2X" value="0" class="slider">
+                                <p id="vector2XStart">0</p>
+                            </div>
+                            <div class="sliders">
+                                <p>y:</p>
+                                <input type="range" min="-1" max="1" step="0.1" id="vector2Y" value="0" class="slider">
+                                <p id="vector2YStart">0</p>
+                            </div>
+                        </div>
+                        <div style="display: none" id="divScailerVect">
+                            <div class="sliders">
+                                <p>Scalair:</p>
+                                <input type="range" min="-1" max="1" step="0.1" id="scalar" value="0.5" class="slider">
+                                <p id="scailerValue">0.5</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="divVectorCanvas" class="classCanvas"></div>
+            </div>
+            <div class="container">
+                <div class="select-container">
+                    <!--Matrix-->
+                        <select id="selectOperationMtx">
+                            <option value="2">Rotatie</option>
+                            <option value="3">Schaalmatrix</option>
+                        </select>
+
+                        <h3 id=txtOperationMtx>Rotatie</h3>
+
+                        <form class="form">
+                            <div style="display: block" id="rotate">
+                                <div class="sliders">
+                                    <p>Θ:</p>
+                                    <input type="range" min="-180" max="180" step="10" id="rot_omega" class="slider">
+                                    <p id="rotValue">0°</p>
+                                </div>
+                            </div>
+                            <div style="display: none" id="scale">
+                                <div class="sliders">
+                                    <p>Sx:</p>
+                                    <input type="range" min="-1" max="1" step="0.1" id="scale_x" value="0" class="slider">
+                                    <p id="scale_xValue">0</p>
+                                </div>
+                                <div class="sliders">
+                                    <p>Sy:</p>
+                                    <input type="range" min="-1" max="1" step="0.1" id="scale_y" value="0" class="slider">
+                                    <p id="scale_yValue">0</p>
+                                </div>
+                            </div>
+                        </form>
+                </div>
+                <div id="divMatrixCanvas" class="classCanvas"></div>
+            </div>
+    </main>
+</body>
+
+</html>
